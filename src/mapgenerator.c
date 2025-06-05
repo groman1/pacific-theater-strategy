@@ -26,9 +26,12 @@ int main(int argc, char **argv)
 	FILE *outfile;
 	if (argc>1) { outfile = fopen(argv[1], "w"); }
 	else { outfile = stdout; }
+	fprintf(outfile, "%d;%d;", width, heigth);
 	for (int i = 0; i<heigth*width; ++i)
 	{
 		fprintf(outfile, "%d;", field[i]);
 	}
+	fprintf(outfile, "\n");
 	if (argc>1) {fclose(outfile);}
+	return 0;
 }

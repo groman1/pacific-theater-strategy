@@ -1,7 +1,11 @@
+#include <ncurses.h>
+
 #ifndef PLAYWINDOW_H
 #define PLAYWINDOW_H
 
-struct playField;
-int *map;
+struct playFieldCell;
+
+int initPlayWindow(WINDOW*);
+int deInitPlayWindow();
 
 #endif
